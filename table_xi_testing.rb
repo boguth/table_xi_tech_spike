@@ -11,7 +11,9 @@ IO.foreach(input) do |x|
   price_array << x.scan(/\d.+/)[0].to_f
   menu_items_array << x
 end
+p menu_items_array
 menu_items_array = menu_items_array.drop(1)
+p menu_items_array
 target_price = price_array.delete_at(0)
 subset_prices(price_array, target_price)
 
